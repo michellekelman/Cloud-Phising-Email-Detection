@@ -15,7 +15,7 @@ def submit_eamil():
 	print(request.form['email'])
 	return classify_email(request.form['email'])
 
-model_file_url="https://emailclassifiermodel6301.s3.us-east-2.amazonaws.com/CountVectorizer_Logistic_Regression_model.pkl"
+model_file_url="https://mymlmodel6301.s3.us-east-2.amazonaws.com/models/CountVectorizer_Logistic_Regression_model.pkl"
 model_file = urllib.request.urlopen(model_file_url)
 model = joblib.load(model_file)
 ##from Validate_Input_Emails.ipynb by vharika333
